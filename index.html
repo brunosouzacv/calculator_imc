@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Mochiy+Pop+P+One&family=Open+Sans&family=Roboto&family=Spline+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h3>Índice de Massa Corporal - IMC</h3>
+    
+    <form class="form" id="form" onsubmit="return validateForm()">
+        
+        <!-- Usuário vai selecionar seu sexo e idade -->
+        <div class="row_one">
+            <input type="text" class="text_input" id="age" autocomplete="off" required/><p class="text">Idade</p>
+            <label class="container">
+                <input type="radio" name="radio" id="feminine"><p class="text">Feminino</p>
+                    <span class="checkmark"></span>
+            </label>
+            <label class="container">
+                <input type="radio" name="radio" id="masculine"><p class="text">Masculino</p>
+                    <span class="checkmark"></span>
+            </label>
+        </div>
+
+        <!-- Usuário vai colocar sua altura e peso -->
+        <div class="row_two">
+            <input type="text" class="text_input" id="height" autocomplete="off" required><p class="text">Altura(cm)</p>
+            <input type="text" class="text_input" id="weight" autocomplete="off" required><p class="text">Peso(kg)</p>
+        </div>
+
+        <!-- Botão para calcular o IMC -->
+        <button type="button" id="button" onclick="calculate_imc()">Calcular</button>
+    </form>
+
+    <!-- Script -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
